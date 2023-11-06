@@ -1,8 +1,11 @@
 <div class="container">
+  <app-creation (serverCreated)="onServerAdded($event)"></app-creation>
+  <hr>
   <div class="row">
     <div class="col-xs-12">
-      <h1>Welcome to Task It!</h1>
-      <app-tasks></app-tasks>
+      <app-task 
+      *ngFor="let serverElement of serverElements"
+      [srvElement]="serverElement"></app-task>
     </div>
   </div>
 </div>
